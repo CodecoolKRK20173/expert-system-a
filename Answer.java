@@ -1,5 +1,6 @@
 
 public class Answer {
+    
 
     public boolean evaluateAnswerByInput(String input){
 
