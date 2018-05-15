@@ -8,7 +8,11 @@ import java.io.File;
 
 public abstract class XMLParser{
 
-    private Document document;
+    protected Document document;
+
+    public XMLParser(String xmlPath){
+        loadXmlDocument(xmlPath);
+    }
     
     public void loadXmlDocument(String xmlPath){
         try{
@@ -24,8 +28,6 @@ public abstract class XMLParser{
             e.printStackTrace();
         }
     }
-    public Document getDocument(){
-        return this.getDocument();
-    }
+
 
 }
