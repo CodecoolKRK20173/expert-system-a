@@ -1,16 +1,27 @@
 <?xml version="1.0"?>
-<company>
-	<staff id="1001">
-		<firstname>yong</firstname>
-		<lastname>mook kim</lastname>
-		<nickname>mkyong</nickname>
-		<salary>100000</salary>
-	</staff>
-	<staff id="2001">
-		<firstname>low</firstname>
-		<lastname>yin fong</lastname>
-		<nickname>fong fong</nickname>
-		<salary>200000</salary>
-	</staff>
-</company>
+<Rules>
+	<Rule id="money">
+		<Question>Do you have 2000 $?</Question>
+		<Answer>
+			<selection value = "true">
+				<SingleValue value = "yes"/>
+			</selection>
+			<selection value = "false">
+				<SingleValue value = "no"/>
+			</selection>
+		</Answer>
+	</Rule>
+	...
+	<Rule id="Type">
+		<Question>Do you need automatic weapon?</Question>
+		<Answer>
+			<selection value = "true">
+				<SingleValue value = "yes"/>
+			</selection>
+			<selection value = "false">
+				<SingleValue value = "no"/>
+			</selection>
+		</Answer>
+	</Rule>
+</Rules>
 
