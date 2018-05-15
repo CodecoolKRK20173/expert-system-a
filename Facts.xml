@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Facts>
     <Fact id="tesla">
-        <Description value="Tesla Model S"/>
+        <Description value="Tesla Model S">dupa</Description>
         <Evals>
             <Eval id="family">true</Eval>
             <Eval id="money">true</Eval>
