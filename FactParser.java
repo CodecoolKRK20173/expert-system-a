@@ -1,49 +1,48 @@
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
+import java.util.*;
 
 public class FactParser extends XMLParser{
 
-    public FactParser(){
-        loadXmlDocument("Facts.xml");
+    private FactRepository factRepo;
 
+    public FactParser(){
+        super("Facts.xml");
+        factRepo = new FactRepository();
     }
-    public void  parseFacts(){
-        System.out.println("Root element :" + getDocument().getDocumentElement().getNodeName()); //print node(facts)
+
+    
+    public void parseFacts(){
+        // System.out.println("Root element :" + document.getNodeName()); //print node(facts)
         
 			
-        NodeList nList = getDocument().getElementsByTagName("Fact");
+        NodeList nList = document.getElementsByTagName("Fact");
                 
-        System.out.println("----------------------------");
+        // System.out.println("----------------------------");
 
         for (int i = 0; i < nList.getLength(); i++) {
 
             Node nNode = nList.item(i);
-                    
-            System.out.println("\nCurrent Element :" + nNode.getNodeName());
-                    
-            if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 
-                Element eElement = (Element) nNode;
+            Element eElement = (Element) nNode;
+            String id = eElement.getAttribute("id");
+            System.out.println(id);
+            String description = eElement.getChildNodes().item(1).getAttributes().item(0).getNodeValue();
+            System.out.println("Description : " + description);
+            Map<String, Boolean> values = new HashMap<>();
 
-                System.out.println("Fact id : " + eElement.getAttribute("id"));
-   
-              
-                System.out.println("Description : " + eElement.getChildNodes().item(1).getAttributes().item(0).getNodeValue());
-            
-                System.out.println("family : " + eElement.getElementsByTagName("Eval").item(0).getTextContent());
-                System.out.println("money : " + eElement.getElementsByTagName("Eval").item(1).getTextContent());
-                System.out.println("comfort : " + eElement.getElementsByTagName("Eval").item(2).getTextContent());
-                System.out.println("luxury : " + eElement.getElementsByTagName("Eval").item(3).getTextContent());
-
+            for(int k = 0; k < eElement.getElementsByTagName("Eval").getLength(); k++){    
+                String evalID = eElement.getElementsByTagName("Eval").item(k).getAttributes().item(0).getNodeValue();
+                Boolean evalBoolean = eElement.getElementsByTagName("Eval").item(k).getTextContent();
+                fact.addIdValue(evalID, evalBoolean);
+                System.out.println(evalID + " : " + evalBoolean);
             }
+        
         }
     }
 
     public FactRepository getFactRepository(){
-
-         return new FactRepository();
-        
-         
+         return this.factRepo;
     }
 }
