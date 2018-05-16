@@ -13,6 +13,10 @@ public class RuleRepository {
         rules.add(question);
     }
 
+    public List<Question> getRulesList(){
+        return this.rules;
+    }
+
     //added for testing
     public void printAllQuestions(){
         for (Question question : rules){
