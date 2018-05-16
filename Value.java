@@ -1,13 +1,22 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Value {
 
-    public List<String> getInputPattern(){
-        return none;
+    private List<String> params;
+    private boolean selectionType;
+
+    public Value(List<String> params, boolean selectionType) {
+        this.params = params;
+        this.selectionType = selectionType;
     }
 
-    public boolean getSelectionType(){
-        return none;
+    public List<String> getInputPattern() {
+        return this.params;
+    }
+
+    public boolean getSelectionType() {
+        return this.selectionType;
     }
     
 }
