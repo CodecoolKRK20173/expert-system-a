@@ -1,10 +1,13 @@
 import java.util.Iterator;
 
-public class QuestionIterator implements Iterator{
+public class QuestionIterator implements Iterator<Question>{
     private RuleRepository ruleRepository;
     private int index;
-    
 
+    public QuestionIterator(){
+        this.ruleRepository = new RuleRepository();
+        this.index = 0;
+    }
 
     @Override
     public boolean hasNext(){
