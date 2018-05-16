@@ -9,10 +9,10 @@ public class ESProvider{
     }
 
     public boolean getAnswerByQuestion(String questionID){
-
+        return true;
     }
 
     public String evaluate(){
-        
+        return "Test";
     }
 }
