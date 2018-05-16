@@ -4,16 +4,15 @@ import java.util.*;
 public class Fact {
     private String id;
     private String description;
-    private Map<String, Boolean> values;
+    private Map<String, Boolean> values = new HashMap<>();
 
-    public Fact(String id, String description, Map<String, Boolean> values){
+    public Fact(String id, String description){
         this.id = id;
         this.description = description;
-        this.values = values;
     }
 
     public Set<String> getIdSet(){
-        Set<String> idSet = new Set<>();
+        Set<String> idSet = new HashSet<>();
         for (Map.Entry<String, Boolean> entry : this.values.entrySet()){
             idSet.add(entry.getKey());
         }
@@ -22,6 +21,8 @@ public class Fact {
 
     public void addIdValue(String id, boolean value){
         this.values.put(id, value);
+        System.out.println("id " + id);
+        System.out.println("value " + value);
     }
 
     public boolean getValueById(String id, boolean value){
@@ -35,5 +36,8 @@ public class Fact {
 
     public String getDescription(){
         return this.description;
+    }
+    public Map<String, Boolean> getValues(){
+        return this.values;
     }
 }
