@@ -33,26 +33,47 @@ public class RuleParser extends XMLParser{
     private Question readQuestion(Element element){
         String id = element.getAttribute("id");
         String questionText = element.getElementsByTagName("Question").item(0).getTextContent();
-        //Answer answer = new Answer(); // need to add other code here (read answer from XML)
-
-        NodeList nodeA = element.getElementsByTagName("Answer").item(0);
-        Answer answer = readAnswer(nodeA);
+        Answer answer = createAnswer((Element) element.getElementsByTagName("Answer").item(0));
 
         Question question = new Question(id, questionText, answer);
         return question;
     }
 
-    private Answer readAnswer(NodeList nodeA) {
-        Element answerElement = (Element)nodeA;
-        NodeList answersList = answerElement.getElementsByTagName("Selection");
-        Answer createdAnswer = new Answer();
-
-        for (int i = 0; i < answersList.getLength(); i++) {
-            createdAnswer.addValue(getValueObject(answersList.item(i)));
+    private Answer createAnswer(Element answer) {
+        NodeList selectionList = answer.getElementsByTagName("selection");
+        Answer newAnswer = new Answer();
+        for (int i = 0; i < selectionList.getLength(); i++) {
+            newAnswer.addValue(getValueObject(selectionList.item(i)));
+            if (newAnswer.evaluateAnswerByInput("yes")){
+                System.out.println("cycki");
+            } else {
+                System.out.println("dupa");
+            }
         }
-        return createdAnswer;
+        
+        return newAnswer;
     }
 
+    private Value getValueObject(Node selection) {
+        NodeList childList = selection.getChildNodes();
+        for (int i = 0; i < childList.getLength(); i++) {
+            if (childList.item(i) instanceof Element) {
+                return getValueInstance((Element) childList.item(i), (Element) selection);
+            }
+        }
+        return null;
+    }
 
-    
+    private Value getValueInstance(Element child, Element parent) {
+        String name = "value";
+        if (child.getTagName().equals("SingleValue")) {
+            if (parent.getAttribute(name).equals("true")) {
+                SingleValue sv = new SingleValue("yes", true);
+                return new SingleValue("yes", true);    
+            } else { 
+                return new SingleValue("no", false); 
+            }
+            
+        } else return null;
+    }    
 }
