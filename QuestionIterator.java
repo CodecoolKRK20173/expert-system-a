@@ -1,17 +1,22 @@
 import java.util.Iterator;
 
 public class QuestionIterator implements Iterator{
-    private List<Question> questionsList;
+    private RuleRepository ruleRepository;
     private int index;
     
 
+
     @Override
     public boolean hasNext(){
-        return index < rules.size();
+        return index < this.ruleRepository.getRulesList().size();
     }
 
     @Override
-    public Fact next(){
+    public Question next(){
+        if (hasNext()){
+            index ++;
+            return this.ruleRepository.getRulesList().get(index);
+        }
 
     }
 }
