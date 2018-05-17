@@ -5,32 +5,25 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class ESProvider{
+    
+    private final String clearSreen = "\033[H\033[2J";
     private FactParser factParser;
     private RuleParser ruleParser;
     private Map<String, Boolean> questionAnswers;
 
     public ESProvider(FactParser factParser, RuleParser ruleParser){
+
         this.factParser = factParser;
         this.ruleParser = ruleParser;
     }
+    
     public void runApplication(){
-        System.out.println("\033[H\033[2J");
+
+        System.out.println(clearSreen);
         collectAnswer();
-        this.factParser.parseFacts();
+        String userWeapon = evaluate();
+        display(userWeapon);
 
-        Iterator<Fact> factIterator = factParser.getFactRepository().getIterator();
-
-        while (factIterator.hasNext()){
-            Fact fact = factIterator.next();
-            if (fact.getValues().equals(questionAnswers)){
-                display(fact.getDescription());
-            }
-        }
-    }
-
-
-    public void display(String message){
-        System.out.println("Perfect firearm for you is: " + message);
     }
     
     public void collectAnswer(){
@@ -53,34 +46,25 @@ public class ESProvider{
     private boolean getAnswerByQuestion(String questionID){
         return questionAnswers.get(questionID);
     }
-    private boolean ifFactChoosen(Fact fact){
-        for(String evalId : fact.getIdSet()){
-            if(fact.getValueById(evalId, fact.getValues().get(evalId)) != getAnswerByQuestion(evalId)){
-
-                return false;
-            }
-        }
-        return true;
-    }   
 
     public String evaluate(){
-        Iterator<Fact> factIterator = factParser.getFactRepository().getIterator();
-        Fact fact;
 
-        while(factIterator.hasNext()){
-            fact = factIterator.next();
-            if(ifFactChoosen(fact)){
+        Iterator<Fact> factIterator = factParser.getFactRepository().getIterator();
+        String userWeapon;
+        while (factIterator.hasNext()){
+            Fact fact = factIterator.next();
+            if (fact.getValues().equals(questionAnswers)){
                 return fact.getDescription();
             }
         }
-        return "maczeta";
+        return null;
     }
 
 
     public String getUserInput(){
+        
         Scanner scanner = new Scanner(System.in);
         
-
         System.out.println("Enter your answer ");
       
         try{
@@ -91,6 +75,10 @@ public class ESProvider{
             System.out.println("Something wrong is with format ");
         }
         return null;
+    }
+    public void display(String message){
+
+        System.out.println("Perfect firearm for you is: " + message);
     }
 
 }
