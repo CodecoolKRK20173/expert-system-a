@@ -23,7 +23,7 @@ public class Question {
     }
 
     public boolean getEvaluatedAnswer(String input){
-        return false;
+        return this.answer.evaluateAnswerByInput(input);
     }
     
 }
