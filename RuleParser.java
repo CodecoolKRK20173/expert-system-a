@@ -26,7 +26,6 @@ public class RuleParser extends XMLParser{
             Question question = readQuestion(element);
             ruleRepository.addQuestion(question);
         }
-        ruleRepository.printAllQuestions();
         return ruleRepository;      
     }
 
