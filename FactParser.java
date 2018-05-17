@@ -1,10 +1,13 @@
-public class FactParser extends XMLParser{
+import org.w3c.dom.NodeList;
+import org.w3c.dom.Node;
+import org.w3c.dom.Element;
+import java.util.*;
 
-    private String xmlPath = "Facts.xml";
+public class FactParser extends XMLParser{
 
     public FactParser() {
         
-        super(xmlPath);
+        super("Facts.xml");
         loadXmlDocument("Facts.xml");
     }
 

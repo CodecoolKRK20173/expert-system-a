@@ -21,13 +21,12 @@ public abstract class XMLParser{
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             this.document = dBuilder.parse(path);
             this.document.getDocumentElement().normalize();
-            System.out.println("Root element :" + this.document.getDocumentElement().getNodeName()); //test
+            System.out.println("Root element :" + this.document.getDocumentElement().getNodeName()); //test //print node(facts)
            
         }
         catch (Exception e) {
             e.printStackTrace();
         }
     }
-
 
 }
