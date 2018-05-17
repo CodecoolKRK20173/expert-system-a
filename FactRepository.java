@@ -3,12 +3,17 @@ import java.util.Iterator;
 import java.util.List;
 
 public class FactRepository {
-    private List<Fact> facts = new ArrayList<>();
+    private List<Fact> facts;
     private FactIterator factIterator;
+
+    public FactRepository(){
+        facts = new ArrayList<>();
+        this.factIterator = new FactIterator(this);
+    }
 
     public void addFact(Fact fact){
         this.facts.add(fact);
-        this.factIterator = new FactIterator(this);
+        
     }
 
     public Iterator<Fact> getIterator(){
