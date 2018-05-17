@@ -1,7 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Facts>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
+    <Fact id="stg">
+        <Description value="STG 44"/>
+        <Evals>
+            <Eval id="money">true</Eval>
+            <Eval id="type">true</Eval>
+            <Eval id="mode">true</Eval>
+            <Eval id="country">true</Eval>
+            <Eval id="model">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="ppsh">
+        <Description value="PPSH 41"/>
+        <Evals>
+            <Eval id="money">true</Eval>
+            <Eval id="type">true</Eval>
+            <Eval id="mode">true</Eval>
+            <Eval id="country">true</Eval>
+            <Eval id="model">false</Eval>
+        </Evals>
+    <Fact id="minigun">
+        <Description value="M134 MINIGUN"/>
+        <Evals>
+            <Eval id="money">true</Eval>
+            <Eval id="type">true</Eval>
+            <Eval id="mode">true</Eval>
+            <Eval id="country">false</Eval>
+            <Eval id="model">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="mp5">
+        <Description value="HK MP5"/>
+        <Evals>
+            <Eval id="money">true</Eval>
+            <Eval id="type">true</Eval>
+            <Eval id="mode">true</Eval>
+            <Eval id="country">false</Eval>
+            <Eval id="model">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="spas">
+        <Description value="SPAS 12"/>
         <Evals>
             <Eval id="money">true</Eval>
             <Eval id="type">true</Eval>
@@ -10,300 +49,261 @@
             <Eval id="model">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
+    <Fact id="kmp">
+        <Description value="KMP45"/>
         <Evals>
             <Eval id="money">true</Eval>
             <Eval id="type">true</Eval>
             <Eval id="mode">false</Eval>
             <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
+            <Eval id="model">false</Eval>
         </Evals>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
+    <Fact id="negev">
+        <Description value="NAGEV"/>
         <Evals>
             <Eval id="money">true</Eval>
+            <Eval id="type">true</Eval>
+            <Eval id="mode">false</Eval>
+            <Eval id="country">false</Eval>
+            <Eval id="model">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="mp">
+        <Description value="MP9"/>
+        <Evals>
+            <Eval id="money">true</Eval>
+            <Eval id="type">true</Eval>
+            <Eval id="mode">false</Eval>
+            <Eval id="country">false</Eval>
+            <Eval id="model">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="g35">
+        <Description value="G35G1"/>
+        <Evals>
+            <Eval id="money">true</Eval>
+            <Eval id="type">false</Eval>
+            <Eval id="mode">true</Eval>
+            <Eval id="country">true</Eval>
+            <Eval id="model">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="mag">
+        <Description value="MAG-7"/>
+        <Evals>
+            <Eval id="money">true</Eval>
+            <Eval id="type">false</Eval>
+            <Eval id="mode">true</Eval>
+            <Eval id="country">true</Eval>
+            <Eval id="model">false</Eval>
+        </Evals>
+    <Fact id="awp">
+        <Description value="AWP"/>
+        <Evals>
+            <Eval id="money">true</Eval>
+            <Eval id="type">false</Eval>
+            <Eval id="mode">true</Eval>
+            <Eval id="country">false</Eval>
+            <Eval id="model">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="mossberg1">
+        <Description value="MOSSBERG 500"/>
+        <Evals>
+            <Eval id="money">true</Eval>
+            <Eval id="type">false</Eval>
+            <Eval id="mode">true</Eval>
+            <Eval id="country">false</Eval>
+            <Eval id="model">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="scar">
+        <Description value="SCAR-20"/>
+        <Evals>
+            <Eval id="money">true</Eval>
+            <Eval id="type">false</Eval>
+            <Eval id="mode">false</Eval>
+            <Eval id="country">true</Eval>
+            <Eval id="model">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="sawed">
+        <Description value="SAWED-OFF"/>
+        <Evals>
+            <Eval id="money">true</Eval>
+            <Eval id="type">false</Eval>
+            <Eval id="mode">false</Eval>
+            <Eval id="country">true</Eval>
+            <Eval id="model">false</Eval>
+        </Evals>
+    <Fact id="remington">
+        <Description value="REMINGTON 783"/>
+        <Evals>
+            <Eval id="money">true</Eval>
+            <Eval id="type">false</Eval>
+            <Eval id="mode">false</Eval>
+            <Eval id="country">false</Eval>
+            <Eval id="model">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="granade">
+        <Description value="GRANADE LAUNCHER"/>
+        <Evals>
+            <Eval id="money">true</Eval>
+            <Eval id="type">false</Eval>
+            <Eval id="mode">false</Eval>
+            <Eval id="country">false</Eval>
+            <Eval id="model">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="m4">
+        <Description value="M4A4"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="type">true</Eval>
+            <Eval id="mode">true</Eval>
+            <Eval id="country">true</Eval>
+            <Eval id="model">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="p90">
+        <Description value="P90"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="type">true</Eval>
+            <Eval id="mode">true</Eval>
+            <Eval id="country">true</Eval>
+            <Eval id="model">false</Eval>
+        </Evals>
+    <Fact id="aug">
+        <Description value="AUG"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="type">true</Eval>
+            <Eval id="mode">true</Eval>
+            <Eval id="country">false</Eval>
+            <Eval id="model">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="mac">
+        <Description value="MAC-10"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="type">true</Eval>
+            <Eval id="mode">true</Eval>
+            <Eval id="country">false</Eval>
+            <Eval id="model">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="ak">
+        <Description value="AK-47"/>
+        <Evals>
+            <Eval id="money">false</Eval>
             <Eval id="type">true</Eval>
             <Eval id="mode">false</Eval>
             <Eval id="country">true</Eval>
             <Eval id="model">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
+    <Fact id="cz75">
+        <Description value="CZ75-AUTO HANDGUN"/>
         <Evals>
-            <Eval id="money">true</Eval>
+            <Eval id="money">false</Eval>
             <Eval id="type">true</Eval>
+            <Eval id="mode">false</Eval>
+            <Eval id="country">true</Eval>
+            <Eval id="model">false</Eval>
+        </Evals>
+    <Fact id="sg">
+        <Description value="SG-553"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="type">true</Eval>
+            <Eval id="mode">false</Eval>
+            <Eval id="country">false</Eval>
+            <Eval id="model">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="uzi">
+        <Description value="MINIUZI"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="type">true</Eval>
+            <Eval id="mode">false</Eval>
+            <Eval id="country">false</Eval>
+            <Eval id="model">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="ssg">
+        <Description value="SSG 08"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="type">false</Eval>
+            <Eval id="mode">true</Eval>
+            <Eval id="country">true</Eval>
+            <Eval id="model">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="desert">
+        <Description value="DESERT EAGLE HANDGUN"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="type">false</Eval>
+            <Eval id="mode">true</Eval>
+            <Eval id="country">true</Eval>
+            <Eval id="model">false</Eval>
+        </Evals>
+    <Fact id="bazooka">
+        <Description value="M20 SUPER BAZOOKA"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="type">false</Eval>
+            <Eval id="mode">true</Eval>
+            <Eval id="country">false</Eval>
+            <Eval id="model">true</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="usp">
+        <Description value="USP-S HANDGUN"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="type">false</Eval>
+            <Eval id="mode">true</Eval>
+            <Eval id="country">false</Eval>
+            <Eval id="model">false</Eval>
+        </Evals>
+    </Fact>
+    <Fact id="mossberg2">
+        <Description value="MOSSBERG MVP"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="type">false</Eval>
             <Eval id="mode">false</Eval>
             <Eval id="country">true</Eval>
             <Eval id="model">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
+    <Fact id="beretas">
+        <Description value="DUAL BERETAS HANDGUN"/>
         <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
+            <Eval id="money">false</Eval>
+            <Eval id="type">false</Eval>
             <Eval id="mode">false</Eval>
             <Eval id="country">true</Eval>
+            <Eval id="model">false</Eval>
+        </Evals>
+    <Fact id="ruger">
+        <Description value="RUGER M77"/>
+        <Evals>
+            <Eval id="money">false</Eval>
+            <Eval id="type">false</Eval>
+            <Eval id="mode">false</Eval>
+            <Eval id="country">false</Eval>
             <Eval id="model">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    </Fact>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    </Fact>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    </Fact>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    </Fact>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    </Fact>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    </Fact>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    </Fact>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    </Fact>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    </Fact>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    </Fact>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    </Fact>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    </Fact>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    </Fact>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    </Fact>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    </Fact>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    </Fact>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    </Fact>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    </Fact>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
-        <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
-            <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
-        </Evals>
-    </Fact>
-    <Fact id="tesla">
-        <Description value="Tesla Model S"/>
+    <Fact id="glock">
+        <Description value="GLOCK-18 HANDGUN"/>
         <Evals>
             <Eval id="money">true</Eval>
             <Eval id="type">true</Eval>
