@@ -16,10 +16,8 @@ public class QuestionIterator implements Iterator<Question>{
 
     @Override
     public Question next(){
-        if (hasNext()){
-            index ++;
-            return this.ruleRepository.getRulesList().get(index);
-        }
+            return this.ruleRepository.getRulesList().get(index++);
+        
 
     }
 }
