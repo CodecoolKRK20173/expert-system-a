@@ -8,42 +8,42 @@ public class FactParser extends XMLParser{
     private FactRepository factRepo;
 
     public FactParser(){
+
         super("Facts.xml");
-        factRepo = new FactRepository();
+        this.factRepo = new FactRepository();
     }
 
-    public void parseFacts(){        
-        NodeList nList = document.getElementsByTagName("Fact");
+    private void parseFacts(){  
 
-        for (int i = 0; i < nList.getLength(); i++) {
+        NodeList nodeList = document.getElementsByTagName("Fact");
 
-            Node nNode = nList.item(i);
+        for (int i = 0; i < nodeList.getLength(); i++) {
+
+            Node nNode = nodeList.item(i);
 
             Element eElement = (Element) nNode;
             String id = eElement.getAttribute("id");
             String description = eElement.getChildNodes().item(1).getAttributes().item(0).getNodeValue();
             Fact fact = new Fact(id, description);
-            int evalsCount = eElement.getElementsByTagName("Eval").getLength();
-
-            for(int k = 0; k < evalsCount; k++){
-                boolean evalBoolean = Boolean.valueOf(eElement.getElementsByTagName("Eval").item(k).getTextContent());    
-                String evalID = eElement.getElementsByTagName("Eval").item(k).getAttributes().item(0).getNodeValue();
-                // if(eElement.getElementsByTagName("Eval").item(k).getTextContent().equals("true")){
-                //     evalBoolean = true;
-                // }
-                // else{
-                //     evalBoolean = false;
-                // }
-               
-                fact.addIdValue(evalID, evalBoolean);
-            }
             
-            factRepo.addFact(fact);
+            addValuesToFacts(fact, eElement);
         }
-        //System.out.println(factRepo.getFacts().size()); remove this line after testing
+    }
+    private void addValuesToFacts(Fact fact, Element eElement){
+
+        int evalsCount = eElement.getElementsByTagName("Eval").getLength();
+        
+        for(int j = 0; j < evalsCount; j++){
+            boolean evalBoolean = Boolean.valueOf(eElement.getElementsByTagName("Eval").item(j).getTextContent());    
+            String evalID = eElement.getElementsByTagName("Eval").item(j).getAttributes().item(0).getNodeValue();
+            fact.addIdValue(evalID, evalBoolean);
+        }
+        factRepo.addFact(fact);
+
     }
 
     public FactRepository getFactRepository(){
-         return this.factRepo;
+        parseFacts();
+        return this.factRepo;
     }
 }
