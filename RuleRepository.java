@@ -4,9 +4,11 @@ import java.util.List;
 
 public class RuleRepository {
     private List<Question> rules;
+    private QuestionIterator<Question> rulesIterator;
 
     public RuleRepository(){
         rules = new ArrayList<>();
+        rulesIterator = new QuestionIterator();
     }
 
     public void addQuestion(Question question){
@@ -17,17 +19,8 @@ public class RuleRepository {
         return this.rules;
     }
 
-    //added for testing
-    public void printAllQuestions(){
-        for (Question question : rules){
-            System.out.println(question.getId());
-            System.out.println(question.getQuestion());
-
-        }
+    public Iterator<Question> getIterator(){
+        return this.rulesIterator;
     }
-
-    // public Iterator<Question> getIterator(){
-        
-    // }
     
 }
