@@ -3,6 +3,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 
 public class RuleParser extends XMLParser{
+    
     private RuleRepository ruleRepository;
 
     public static void main(String[] args) {
@@ -12,7 +13,7 @@ public class RuleParser extends XMLParser{
     }
 
     public RuleParser(){
-        super("Rules.xml");
+        loadXmlDocument("Rules.xml");
     }
 
     public RuleRepository getRuleRepository(){

@@ -1,19 +1,19 @@
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.FactoryConfigurationError;
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.DocumentBuilder;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 import java.io.File;
+import java.io.IOException;
 
 public abstract class XMLParser{
 
     protected Document document;
 
-    public XMLParser(String xmlPath){
-        loadXmlDocument(xmlPath);
-    }
-    
     public void loadXmlDocument(String xmlPath){
         try{
             File path = new File(xmlPath);
@@ -21,10 +21,17 @@ public abstract class XMLParser{
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             this.document = dBuilder.parse(path);
             this.document.getDocumentElement().normalize();
-            System.out.println("Root element :" + this.document.getDocumentElement().getNodeName()); //test //print node(facts)
-           
         }
-        catch (Exception e) {
+        catch (FactoryConfigurationError e) {
+            e.printStackTrace();
+        }
+        catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        }
+        catch (SAXException e) {
+            e.printStackTrace();
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
     }
