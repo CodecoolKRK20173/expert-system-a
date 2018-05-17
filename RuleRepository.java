@@ -8,7 +8,7 @@ public class RuleRepository {
 
     public RuleRepository(){
         rules = new ArrayList<>();
-        rulesIterator = new QuestionIterator();
+        this.rulesIterator = new QuestionIterator(this);
     }
 
     public void addQuestion(Question question){

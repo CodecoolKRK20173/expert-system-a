@@ -4,8 +4,8 @@ public class QuestionIterator implements Iterator<Question>{
     private RuleRepository ruleRepository;
     private int index;
 
-    public QuestionIterator(){
-        this.ruleRepository = new RuleRepository();
+    public QuestionIterator(RuleRepository ruleRepository){
+        this.ruleRepository = ruleRepository;
         this.index = 0;
     }
 

@@ -10,21 +10,20 @@ public class Answer {
     }
 
     public boolean evaluateAnswerByInput(String input) throws InputMismatchException {
-        boolean papier = false;
-        
+        boolean reponse = false;
         if (input.equals("yes") || input.equals("no")) {
             for (Value value : possibleValues) {
                 for (String option : value.getInputPattern()) {
                     if (option.equals(input)){
-                        papier = true;
+                        return reponse = true;
                     } else {
-                        papier = false;
+                        return reponse = false;
                     }
                 }
             }
         } else
             throw new InputMismatchException();
-        return papier;
+        return reponse;
     }
 
     public void addValue(Value value){

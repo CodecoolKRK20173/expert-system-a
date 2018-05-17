@@ -15,15 +15,17 @@ public class ESProvider{
     }
     public void runApplication(){
         collectAnswer();
+        this.factParser.parseFacts();
         display(evaluate());
     }
     public void display(String message){
-        System.out.println("Perfet firearm for you is: " + message);
+        System.out.println("Perfect firearm for you is: " + message);
     }
     
     public void collectAnswer(){
+        ruleParser.getRuleRepository();
 
-        Iterator<Question> questionIterator = ruleParser.getRuleRepository().getIterator();
+       Iterator<Question> questionIterator = ruleParser.getRuleRepository().getIterator();
         questionAnswers = new HashMap<String, Boolean>();
         Question question;
         String input;
@@ -32,6 +34,8 @@ public class ESProvider{
             question = questionIterator.next();
             input = getUserInput();
             questionAnswers.put(question.getId(), question.getEvaluatedAnswer(input));
+            System.out.println("id" + question.getId());
+            System.out.println("boolean" + question.getEvaluatedAnswer(input));
         }
     }
 
@@ -40,11 +44,12 @@ public class ESProvider{
     }
     private boolean ifFactChoosen(Fact fact){
         for(String evalId : fact.getIdSet()){
-            if(fact.getValueById(evalId, fact.getValues().get(evalId)) == this.getAnswerByQuestion(evalId)){
-                return true;
+            if(fact.getValueById(evalId, fact.getValues().get(evalId)) != getAnswerByQuestion(evalId)){
+
+                return false;
             }
         }
-        return false;
+        return true;
     }   
 
     public String evaluate(){
@@ -54,10 +59,11 @@ public class ESProvider{
         while(factIterator.hasNext()){
             fact = factIterator.next();
             if(ifFactChoosen(fact)){
+                System.out.println("duupp");
                 return fact.getDescription();
             }
         }
-        return null;
+        return "maczeta";
     }
 
 
