@@ -16,7 +16,24 @@ public class ESProvider{
     public void runApplication(){
         collectAnswer();
         this.factParser.parseFacts();
-        display(evaluate());
+        //display(evaluate());
+        // chujchujchujchuj
+
+        Iterator<Fact> factIterator = factParser.getFactRepository().getIterator();
+
+        while (factIterator.hasNext()){
+            Fact fact = factIterator.next();
+            if (fact.getValues().equals(questionAnswers)){
+                display(fact.getDescription());
+            }
+            else{
+                System.out.println("ni ma opcji");
+            }
+        }
+            
+
+        
+        
     }
     public void display(String message){
         System.out.println("Perfect firearm for you is: " + message);
@@ -34,6 +51,7 @@ public class ESProvider{
             question = questionIterator.next();
             input = getUserInput();
             questionAnswers.put(question.getId(), question.getEvaluatedAnswer(input));
+            //========================================================
             System.out.println("id" + question.getId());
             System.out.println("boolean" + question.getEvaluatedAnswer(input));
         }

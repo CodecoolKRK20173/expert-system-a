@@ -313,11 +313,11 @@
     <Fact> id="glock">
         <Description value="GLOCK-18 HANDGUN"/>
         <Evals>
-            <Eval id="money">true</Eval>
-            <Eval id="type">true</Eval>
+            <Eval id="money">false</Eval>
+            <Eval id="type">false</Eval>
             <Eval id="mode">false</Eval>
-            <Eval id="country">true</Eval>
-            <Eval id="model">true</Eval>
+            <Eval id="country">false</Eval>
+            <Eval id="model">false</Eval>
         </Evals>
     </Fact>
 </Facts>

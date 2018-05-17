@@ -5,6 +5,12 @@ import org.w3c.dom.Node;
 public class RuleParser extends XMLParser{
     private RuleRepository ruleRepository;
 
+    public static void main(String[] args) {
+        RuleParser ruleParser = new RuleParser();
+        ruleParser.getRuleRepository();
+       
+    }
+
     public RuleParser(){
         super("Rules.xml");
     }
@@ -20,7 +26,7 @@ public class RuleParser extends XMLParser{
             Question question = readQuestion(element);
             ruleRepository.addQuestion(question);
         }
-        return this.ruleRepository;      
+        return ruleRepository;      
     }
 
     private Question readQuestion(Element element){
@@ -37,6 +43,7 @@ public class RuleParser extends XMLParser{
         Answer newAnswer = new Answer();
         for (int i = 0; i < selectionList.getLength(); i++) {
             newAnswer.addValue(getValueObject(selectionList.item(i)));
+            
         }
         
         return newAnswer;
