@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Rules>
 	<Rule id="money">
-		<Question>Do you have 2000 $?</Question>
+		<Question>Do you have more than 2000 $?</Question>
 		<Answer>
 			<selection value = "true">
 				<SingleValue value = "yes"/>
@@ -11,8 +11,41 @@
 			</selection>
 		</Answer>
 	</Rule>
-	<Rule id="Type">
-		<Question>Do you need automatic weapon?</Question>
+	<Rule id="type">
+		<Question>Do you want to shoot automatically?</Question>
+		<Answer>
+			<selection value = "true">
+				<SingleValue value = "yes"/>
+			</selection>
+			<selection value = "false">
+				<SingleValue value = "no"/>
+			</selection>
+		</Answer>
+	</Rule>
+	<Rule id="mode">
+		<Question>Do you wanna be a terrorist?</Question>
+		<Answer>
+			<selection value = "true">
+				<SingleValue value = "yes"/>
+			</selection>
+			<selection value = "false">
+				<SingleValue value = "no"/>
+			</selection>
+		</Answer>
+	</Rule>
+	<Rule id="country">
+		<Question>Do you want travel to south countries?</Question>
+		<Answer>
+			<selection value = "true">
+				<SingleValue value = "yes"/>
+			</selection>
+			<selection value = "false">
+				<SingleValue value = "no"/>
+			</selection>
+		</Answer>
+	</Rule>
+	<Rule id="model">
+		<Question>Do you like weapon with long barrel?</Question>
 		<Answer>
 			<selection value = "true">
 				<SingleValue value = "yes"/>
@@ -23,4 +56,3 @@
 		</Answer>
 	</Rule>
 </Rules>
-
