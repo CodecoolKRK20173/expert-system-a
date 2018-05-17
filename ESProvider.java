@@ -18,9 +18,8 @@ public class ESProvider {
         
         System.out.println(CLEARSCREEN);
         collectAnswer();
-        this.factParser.parseFacts();
         String userWeapon = evaluate();
-        UserUI.displayMessage(userWeapon);
+        UI.displayMessage(userWeapon);
     }
 
     public void collectAnswer() {
@@ -34,8 +33,8 @@ public class ESProvider {
 
         while (questionIterator.hasNext()) {
             question = questionIterator.next();
-            System.out.println(question.getQuestion());
-            input = UserUI.getUserInput();
+            UI.displayMessage(question.getQuestion());
+            input = UI.getUserInput();
             questionAnswers.put(question.getId(), question.getEvaluatedAnswer(input));
         }
     }

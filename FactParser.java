@@ -10,9 +10,10 @@ public class FactParser extends XMLParser {
     public FactParser() {
         loadXmlDocument("Facts.xml");
         this.factRepository = new FactRepository();
+        parseFacts();
     }
 
-    public void parseFacts() {
+    private void parseFacts() {
         NodeList nodeList = document.getElementsByTagName("Fact");
         
         for (int i = 0; i < nodeList.getLength(); i++) {

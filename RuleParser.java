@@ -3,21 +3,17 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 
 public class RuleParser extends XMLParser{
-    
+
     private RuleRepository ruleRepository;
 
-    public static void main(String[] args) {
-        RuleParser ruleParser = new RuleParser();
-        ruleParser.getRuleRepository();
-       
-    }
 
     public RuleParser(){
         loadXmlDocument("Rules.xml");
+        this.ruleRepository = new RuleRepository();
+        ParseRule();
     }
 
-    public RuleRepository getRuleRepository(){
-        ruleRepository = new RuleRepository();
+    private void ParseRule(){
         NodeList nList = document.getElementsByTagName("Rule");
 
         for (int temp = 0; temp < nList.getLength(); temp++) {
@@ -27,7 +23,10 @@ public class RuleParser extends XMLParser{
             Question question = readQuestion(element);
             ruleRepository.addQuestion(question);
         }
-        return ruleRepository;      
+    }
+
+    public RuleRepository getRuleRepository(){
+        return this.ruleRepository;      
     }
 
     private Question readQuestion(Element element){
@@ -44,9 +43,7 @@ public class RuleParser extends XMLParser{
         Answer newAnswer = new Answer();
         for (int i = 0; i < selectionList.getLength(); i++) {
             newAnswer.addValue(getValueObject(selectionList.item(i)));
-            
-        }
-        
+        }   
         return newAnswer;
     }
 
@@ -64,7 +61,7 @@ public class RuleParser extends XMLParser{
         String name = "value";
         if (child.getTagName().equals("SingleValue")) {
             if (parent.getAttribute(name).equals("true")) {
-                SingleValue sv = new SingleValue("yes", true);
+                SingleValue sv = new SingleValue("yes", true);//>>>>>>>>>Chyba nie potrzebe ?
                 return new SingleValue("yes", true);    
             } else { 
                 return new SingleValue("no", false); 

@@ -3,6 +3,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class RuleRepository {
+    
     private List<Question> rules;
     private QuestionIterator rulesIterator;
 
