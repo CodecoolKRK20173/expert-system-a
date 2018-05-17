@@ -14,10 +14,9 @@ public class ESProvider{
         this.ruleParser = ruleParser;
     }
     public void runApplication(){
+        System.out.println("\033[H\033[2J");
         collectAnswer();
         this.factParser.parseFacts();
-        //display(evaluate());
-        // chujchujchujchuj
 
         Iterator<Fact> factIterator = factParser.getFactRepository().getIterator();
 
@@ -26,15 +25,10 @@ public class ESProvider{
             if (fact.getValues().equals(questionAnswers)){
                 display(fact.getDescription());
             }
-            else{
-                System.out.println("ni ma opcji");
-            }
         }
-            
-
-        
-        
     }
+
+
     public void display(String message){
         System.out.println("Perfect firearm for you is: " + message);
     }
@@ -43,17 +37,16 @@ public class ESProvider{
         ruleParser.getRuleRepository();
 
        Iterator<Question> questionIterator = ruleParser.getRuleRepository().getIterator();
+
         questionAnswers = new HashMap<String, Boolean>();
         Question question;
         String input;
         
         while(questionIterator.hasNext()){
             question = questionIterator.next();
+            System.out.println(question.getQuestion());
             input = getUserInput();
             questionAnswers.put(question.getId(), question.getEvaluatedAnswer(input));
-            //========================================================
-            System.out.println("id" + question.getId());
-            System.out.println("boolean" + question.getEvaluatedAnswer(input));
         }
     }
 
@@ -77,7 +70,6 @@ public class ESProvider{
         while(factIterator.hasNext()){
             fact = factIterator.next();
             if(ifFactChoosen(fact)){
-                System.out.println("duupp");
                 return fact.getDescription();
             }
         }
@@ -85,12 +77,10 @@ public class ESProvider{
     }
 
 
-
-
-
-
     public String getUserInput(){
         Scanner scanner = new Scanner(System.in);
+        
+
         System.out.println("Enter your answer ");
       
         try{
@@ -102,4 +92,5 @@ public class ESProvider{
         }
         return null;
     }
+
 }
