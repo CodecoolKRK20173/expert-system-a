@@ -22,7 +22,7 @@ public class ESProvider{
         System.out.println(clearSreen);
         collectAnswer();
         String userWeapon = evaluate();
-        display(userWeapon);
+        UserUI.displayMessage(userWeapon);
 
     }
     
@@ -38,7 +38,7 @@ public class ESProvider{
         while(questionIterator.hasNext()){
             question = questionIterator.next();
             System.out.println(question.getQuestion());
-            input = getUserInput();
+            input = UserUI.getUserInput();
             questionAnswers.put(question.getId(), question.getEvaluatedAnswer(input));
         }
     }
@@ -61,24 +61,6 @@ public class ESProvider{
     }
 
 
-    public String getUserInput(){
-        
-        Scanner scanner = new Scanner(System.in);
-        
-        System.out.println("Enter your answer ");
-      
-        try{
-            String input = scanner.nextLine();
-            return input;
-        }
-        catch(InputMismatchException e){
-            System.out.println("Something wrong is with format ");
-        }
-        return null;
-    }
-    public void display(String message){
-
-        System.out.println("Perfect firearm for you is: " + message);
-    }
+   
 
 }

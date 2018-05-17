@@ -21,8 +21,10 @@ public class Answer {
                     }
                 }
             }
-        } else
-            throw new InputMismatchException();
+        } 
+        else{
+            throw new InputMismatchException("Answer must have only [yes] or [no] answer ");
+        } 
         return reponse;
     }
 
