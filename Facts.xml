@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Facts>
-    <Fact id="stg">
+    <Fact> id="stg">
         <Description value="STG 44"/>
         <Evals>
             <Eval id="money">true</Eval>
@@ -10,7 +10,7 @@
             <Eval id="model">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="ppsh">
+    <Fact> id="ppsh">
         <Description value="PPSH 41"/>
         <Evals>
             <Eval id="money">true</Eval>
@@ -19,7 +19,8 @@
             <Eval id="country">true</Eval>
             <Eval id="model">false</Eval>
         </Evals>
-    <Fact id="minigun">
+    </Fact>
+    <Fact> id="minigun">
         <Description value="M134 MINIGUN"/>
         <Evals>
             <Eval id="money">true</Eval>
@@ -29,7 +30,7 @@
             <Eval id="model">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="mp5">
+    <Fact> id="mp5">
         <Description value="HK MP5"/>
         <Evals>
             <Eval id="money">true</Eval>
@@ -39,7 +40,7 @@
             <Eval id="model">false</Eval>
         </Evals>
     </Fact>
-    <Fact id="spas">
+    <Fact> id="spas">
         <Description value="SPAS 12"/>
         <Evals>
             <Eval id="money">true</Eval>
@@ -49,7 +50,7 @@
             <Eval id="model">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="kmp">
+    <Fact> id="kmp">
         <Description value="KMP45"/>
         <Evals>
             <Eval id="money">true</Eval>
@@ -58,7 +59,8 @@
             <Eval id="country">true</Eval>
             <Eval id="model">false</Eval>
         </Evals>
-    <Fact id="negev">
+    </Fact>
+    <Fact> id="negev">
         <Description value="NAGEV"/>
         <Evals>
             <Eval id="money">true</Eval>
@@ -68,7 +70,7 @@
             <Eval id="model">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="mp">
+    <Fact> id="mp">
         <Description value="MP9"/>
         <Evals>
             <Eval id="money">true</Eval>
@@ -78,7 +80,7 @@
             <Eval id="model">false</Eval>
         </Evals>
     </Fact>
-    <Fact id="g35">
+    <Fact> id="g35">
         <Description value="G35G1"/>
         <Evals>
             <Eval id="money">true</Eval>
@@ -88,7 +90,7 @@
             <Eval id="model">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="mag">
+    <Fact> id="mag">
         <Description value="MAG-7"/>
         <Evals>
             <Eval id="money">true</Eval>
@@ -97,7 +99,8 @@
             <Eval id="country">true</Eval>
             <Eval id="model">false</Eval>
         </Evals>
-    <Fact id="awp">
+    </Fact>
+    <Fact> id="awp">
         <Description value="AWP"/>
         <Evals>
             <Eval id="money">true</Eval>
@@ -107,7 +110,7 @@
             <Eval id="model">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="mossberg1">
+    <Fact> id="mossberg1">
         <Description value="MOSSBERG 500"/>
         <Evals>
             <Eval id="money">true</Eval>
@@ -117,7 +120,7 @@
             <Eval id="model">false</Eval>
         </Evals>
     </Fact>
-    <Fact id="scar">
+    <Fact> id="scar">
         <Description value="SCAR-20"/>
         <Evals>
             <Eval id="money">true</Eval>
@@ -127,7 +130,7 @@
             <Eval id="model">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="sawed">
+    <Fact> id="sawed">
         <Description value="SAWED-OFF"/>
         <Evals>
             <Eval id="money">true</Eval>
@@ -136,7 +139,8 @@
             <Eval id="country">true</Eval>
             <Eval id="model">false</Eval>
         </Evals>
-    <Fact id="remington">
+    </Fact>
+    <Fact> id="remington">
         <Description value="REMINGTON 783"/>
         <Evals>
             <Eval id="money">true</Eval>
@@ -146,7 +150,7 @@
             <Eval id="model">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="granade">
+    <Fact> id="granade">
         <Description value="GRANADE LAUNCHER"/>
         <Evals>
             <Eval id="money">true</Eval>
@@ -156,7 +160,7 @@
             <Eval id="model">false</Eval>
         </Evals>
     </Fact>
-    <Fact id="m4">
+    <Fact> id="m4">
         <Description value="M4A4"/>
         <Evals>
             <Eval id="money">false</Eval>
@@ -166,7 +170,7 @@
             <Eval id="model">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="p90">
+    <Fact> id="p90">
         <Description value="P90"/>
         <Evals>
             <Eval id="money">false</Eval>
@@ -175,7 +179,8 @@
             <Eval id="country">true</Eval>
             <Eval id="model">false</Eval>
         </Evals>
-    <Fact id="aug">
+    </Fact>
+    <Fact> id="aug">
         <Description value="AUG"/>
         <Evals>
             <Eval id="money">false</Eval>
@@ -185,7 +190,7 @@
             <Eval id="model">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="mac">
+    <Fact> id="mac">
         <Description value="MAC-10"/>
         <Evals>
             <Eval id="money">false</Eval>
@@ -195,7 +200,7 @@
             <Eval id="model">false</Eval>
         </Evals>
     </Fact>
-    <Fact id="ak">
+    <Fact> id="ak">
         <Description value="AK-47"/>
         <Evals>
             <Eval id="money">false</Eval>
@@ -205,7 +210,7 @@
             <Eval id="model">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="cz75">
+    <Fact> id="cz75">
         <Description value="CZ75-AUTO HANDGUN"/>
         <Evals>
             <Eval id="money">false</Eval>
@@ -214,7 +219,8 @@
             <Eval id="country">true</Eval>
             <Eval id="model">false</Eval>
         </Evals>
-    <Fact id="sg">
+    </Fact>
+    <Fact> id="sg">
         <Description value="SG-553"/>
         <Evals>
             <Eval id="money">false</Eval>
@@ -224,7 +230,7 @@
             <Eval id="model">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="uzi">
+    <Fact> id="uzi">
         <Description value="MINIUZI"/>
         <Evals>
             <Eval id="money">false</Eval>
@@ -234,7 +240,7 @@
             <Eval id="model">false</Eval>
         </Evals>
     </Fact>
-    <Fact id="ssg">
+    <Fact> id="ssg">
         <Description value="SSG 08"/>
         <Evals>
             <Eval id="money">false</Eval>
@@ -244,7 +250,7 @@
             <Eval id="model">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="desert">
+    <Fact> id="desert">
         <Description value="DESERT EAGLE HANDGUN"/>
         <Evals>
             <Eval id="money">false</Eval>
@@ -253,7 +259,8 @@
             <Eval id="country">true</Eval>
             <Eval id="model">false</Eval>
         </Evals>
-    <Fact id="bazooka">
+    </Fact>
+    <Fact> id="bazooka">
         <Description value="M20 SUPER BAZOOKA"/>
         <Evals>
             <Eval id="money">false</Eval>
@@ -263,7 +270,7 @@
             <Eval id="model">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="usp">
+    <Fact> id="usp">
         <Description value="USP-S HANDGUN"/>
         <Evals>
             <Eval id="money">false</Eval>
@@ -273,7 +280,7 @@
             <Eval id="model">false</Eval>
         </Evals>
     </Fact>
-    <Fact id="mossberg2">
+    <Fact> id="mossberg2">
         <Description value="MOSSBERG MVP"/>
         <Evals>
             <Eval id="money">false</Eval>
@@ -283,7 +290,7 @@
             <Eval id="model">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="beretas">
+    <Fact> id="beretas">
         <Description value="DUAL BERETAS HANDGUN"/>
         <Evals>
             <Eval id="money">false</Eval>
@@ -292,7 +299,8 @@
             <Eval id="country">true</Eval>
             <Eval id="model">false</Eval>
         </Evals>
-    <Fact id="ruger">
+    </Fact>
+    <Fact> id="ruger">
         <Description value="RUGER M77"/>
         <Evals>
             <Eval id="money">false</Eval>
@@ -302,7 +310,7 @@
             <Eval id="model">true</Eval>
         </Evals>
     </Fact>
-    <Fact id="glock">
+    <Fact> id="glock">
         <Description value="GLOCK-18 HANDGUN"/>
         <Evals>
             <Eval id="money">true</Eval>

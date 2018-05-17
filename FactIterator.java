@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class FactIterator implements Iterator<Fact>{
+public class FactIterator implements Iterator<Fact>>{
 
     private FactRepository factRepository;
     private int index = 0;
