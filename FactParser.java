@@ -40,7 +40,7 @@ public class FactParser extends XMLParser{
             
             factRepo.addFact(fact);
         }
-        System.out.println(factRepo.getFacts().size());
+        //System.out.println(factRepo.getFacts().size()); remove this line after testing
     }
 
     public FactRepository getFactRepository(){
