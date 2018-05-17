@@ -2,6 +2,7 @@ import java.util.*;
 
 
 public class Fact {
+
     private String id;
     private String description;
     private Map<String, Boolean> values = new HashMap<>();
@@ -34,6 +35,7 @@ public class Fact {
 
     public String getDescription(){
         return this.description;
+        
     }
     public Map<String, Boolean> getValues(){
         return this.values;

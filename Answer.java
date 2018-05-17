@@ -3,13 +3,16 @@ import java.util.List;
 import java.util.InputMismatchException;
 
 public class Answer {
+
     private List<Value> possibleValues;
 
     public Answer(){
+
         this.possibleValues = new ArrayList<Value>();
     }
 
     public boolean evaluateAnswerByInput(String input) throws InputMismatchException {
+
         boolean reponse = false;
         if (input.equals("yes") || input.equals("no")) {
             for (Value value : possibleValues) {
@@ -29,6 +32,7 @@ public class Answer {
     }
 
     public void addValue(Value value){
+        
         this.possibleValues.add(value);
     }
 
