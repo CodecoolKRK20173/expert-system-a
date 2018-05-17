@@ -21,8 +21,6 @@ public class Fact {
 
     public void addIdValue(String id, boolean value){
         this.values.put(id, value);
-        System.out.println("id " + id);
-        System.out.println("value " + value);
     }
 
     public boolean getValueById(String id, boolean value){

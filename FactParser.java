@@ -6,21 +6,14 @@ import java.util.*;
 public class FactParser extends XMLParser{
 
     private FactRepository factRepo;
-    private Fact fact;
 
     public FactParser(){
         super("Facts.xml");
         factRepo = new FactRepository();
     }
 
-    
-    public void parseFacts(){
-        // System.out.println("Root element :" + document.getNodeName()); //print node(facts)
-        
-			
+    public void parseFacts(){        
         NodeList nList = document.getElementsByTagName("Fact");
-                
-        // System.out.println("----------------------------");
 
         for (int i = 0; i < nList.getLength(); i++) {
 
@@ -28,28 +21,26 @@ public class FactParser extends XMLParser{
 
             Element eElement = (Element) nNode;
             String id = eElement.getAttribute("id");
-            System.out.println(id);
             String description = eElement.getChildNodes().item(1).getAttributes().item(0).getNodeValue();
-            System.out.println("Description : " + description);
-            this.fact = new Fact(id, description);
+            Fact fact = new Fact(id, description);
+            int evalsCount = eElement.getElementsByTagName("Eval").getLength();
 
-            for(int k = 0; k < eElement.getElementsByTagName("Eval").getLength(); k++){
-                boolean evalBoolean;    
+            for(int k = 0; k < evalsCount; k++){
+                boolean evalBoolean = Boolean.valueOf(eElement.getElementsByTagName("Eval").item(k).getTextContent());    
                 String evalID = eElement.getElementsByTagName("Eval").item(k).getAttributes().item(0).getNodeValue();
-                if(eElement.getElementsByTagName("Eval").item(k).getTextContent().equals("true")){
-                    evalBoolean = true;
-                }
-                else{
-                    evalBoolean = false;
-                }
+                // if(eElement.getElementsByTagName("Eval").item(k).getTextContent().equals("true")){
+                //     evalBoolean = true;
+                // }
+                // else{
+                //     evalBoolean = false;
+                // }
                
-                this.fact.addIdValue(evalID, evalBoolean);
-               // System.out.println(evalID + " : " + evalBoolean);
+                fact.addIdValue(evalID, evalBoolean);
             }
-     
-            System.out.println(fact.getValues().size());
+            
+            factRepo.addFact(fact);
         }
-        factRepo.addFact(this.fact);
+        System.out.println(factRepo.getFacts().size());
     }
 
     public FactRepository getFactRepository(){

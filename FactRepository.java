@@ -7,7 +7,7 @@ public class FactRepository {
     private FactIterator factIterator;
 
     public void addFact(Fact fact){
-        this.fact.add(fact);
+        this.facts.add(fact);
         this.factIterator = new FactIterator(this);
     }
 
@@ -16,6 +16,6 @@ public class FactRepository {
     }
  
     public List<Fact> getFacts(){
-        return this.fact;
+        return this.facts;
     }
 }
