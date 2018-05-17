@@ -4,7 +4,7 @@ import java.util.List;
 
 public class RuleRepository {
     private List<Question> rules;
-    private QuestionIterator<Question> rulesIterator;
+    private QuestionIterator rulesIterator;
 
     public RuleRepository(){
         rules = new ArrayList<>();
